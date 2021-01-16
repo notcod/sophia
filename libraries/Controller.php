@@ -8,7 +8,7 @@ class Controller
     protected $method;
     protected $data = [];
 
-    public function __construct()
+    public function DB()
     {
         $this->DB = new \Sophia\Addon\DB(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     }
