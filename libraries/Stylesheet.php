@@ -17,11 +17,11 @@ class Stylesheet
         foreach ($styles as $style)
             $execute[] = $style["ext"] ? $style["href"] : ROOT . $style["href"] . '?v=' . filemtime($style["href"]);
 
-        $file = "assets/theme/css/" . $data["view"] . ".css";
+        $file = "assets/css/" . $data["view"] . ".css";
         if (file_exists($file))
             $execute[] = $file;
 
-        $file = "assets/theme/css/" . $data["view"] . "/" . $data["page"] . ".css";
+        $file = "assets/css/" . $data["view"] . "/" . $data["page"] . ".css";
         if (isset($data["page"]) && file_exists($file))
             $execute[] = $file;
 

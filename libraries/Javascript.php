@@ -17,11 +17,11 @@ class Javascript
         foreach ($scripts as $script)
             $execute[] = $script["ext"] ? $script["href"] : ROOT . $script["href"] . '?v=' . filemtime($script["href"]);
 
-        $file = "assets/theme/js/" . $data["view"] . ".js";
+        $file = "assets/js/" . $data["view"] . ".js";
         if (file_exists($file))
             $execute[] = $file;
 
-        $file = "assets/theme/js/" . $data["view"] . "/" . $data["page"] . ".js";
+        $file = "assets/js/" . $data["view"] . "/" . $data["page"] . ".js";
         if (isset($data["page"]) && file_exists($file))
             $execute[] = $file;
 

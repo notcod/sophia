@@ -28,12 +28,7 @@ class Controller
             return new $run();
         }else{
             if (!file_exists('models/' . $model . '.php')) return false;
-
             require_once 'models/' . $model . '.php';
-
-            $run = explode('/', $model);
-            $run = "\Model\\" . end($run);
-
             return new $run();
         }
     }
