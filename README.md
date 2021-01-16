@@ -13,7 +13,7 @@ _If you want to download framework using composer:_
 
 Easy download on server
 
-`<?php
+    <?php
 
     $name = "sophia";
 
@@ -43,4 +43,4 @@ Easy download on server
 
     }
 
-?>`
+    ?>
