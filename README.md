@@ -13,34 +13,34 @@ _If you want to download framework using composer:_
 
 Easy download on server
 
-`<?php
+<?php
 
-$name = "sophia";
+    $name = "sophia";
 
-$version = "1.2";
+    $version = "1.2";
 
-$zip_file = $name . '-' . $version . '.zip';
+    $zip_file = $name . '-' . $version . '.zip';
 
-file_put_contents($zip_file, file_get_contents("https://github.com/notcod/$name/archive/$version.zip"));
+    file_put_contents($zip_file, file_get_contents("https://github.com/notcod/$name/archive/$version.zip"));
 
-$zip = new ZipArchive;
+    $zip = new ZipArchive;
 
-$res = $zip->open($zip_file);
+    $res = $zip->open($zip_file);
 
-if ($res === TRUE) {
+    if ($res === TRUE) {
 
-    $zip->extractTo(dirname(__FILE__));
-    
-    $zip->close();
-    
-    unlink($zip_file);
-    
-    echo 'cool!';
-    
-} else {
+        $zip->extractTo(dirname(__FILE__));
 
-    echo 'doh!';
-    
-}
+        $zip->close();
 
-?>`
+        unlink($zip_file);
+
+        echo 'cool!';
+
+    } else {
+
+        echo 'doh!';
+
+    }
+
+?>
