@@ -1,7 +1,8 @@
 **__<h1>Sophia PHP Minimalistic framework</h1>__**
 
 <br>
-_DOCUMENTATION WILL BE AVAILABLE SOON_
+
+__DOCUMENTATION WILL BE AVAILABLE SOON__
 
 _If you want to download framework using composer:_
 
