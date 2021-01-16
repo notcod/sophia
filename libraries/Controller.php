@@ -22,7 +22,7 @@ class Controller
     public function model($model)
     {
         $run = explode('/', $model);
-        $run = "Sophia\\Model\\" . end($run);
+        $run = "\\Sophia\\Model\\" . end($run);
 
         if (class_exists($run)) {
             return new $run();
