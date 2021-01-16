@@ -1,0 +1,29 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.features .feature-icon {
+    font-size: 55px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.features {
+    font-size: 87%;
+}
+
+.features h5 {
+    margin-bottom: .3rem;
+}
+
+.features .feature {
+    min-height: 80px;
+    margin-bottom: 55px;
+}
+
+.features i {
+    color: #5296f5;
+}

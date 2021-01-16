@@ -1,0 +1,62 @@
+<?php
+namespace Sophia;
+
+class Core
+{
+    protected $currentController = 'Home';
+    protected $currentMethod = 'index';
+    protected $params = [];
+
+    public function __construct()
+    {
+        if (!DEV_MODE)
+            ob_start('html_one_line');
+        else
+            ob_start('img_root');
+
+        $url = $this->getUrl();
+
+        $folder = isset($_POST["_token"]) || isset($_GET["_token"])  ? "requests" : "controllers";
+
+        $Controller = isset($url[0]) && !empty($url[0]) ? ucwords($url[0]) : $this->currentController;
+        if (file_exists($folder . '/' . $Controller . '.php')) {
+            $this->currentController = $Controller;
+            if(isset($url[0])) unset($url[0]);
+        } else{
+            $error = "Controller [ $Controller ] doesn't exist!";
+            require_once('template/404.php');
+            exit();
+        }
+
+        require_once $folder . '/' . $this->currentController . '.php';
+
+        $this->currentController = ucwords($folder) . "\\" . $this->currentController;
+
+        $this->currentController = new $this->currentController;
+
+        
+        $Method = isset($url[1]) ? $url[1] : $this->currentMethod;
+        // if (isset($url[1])) {
+            if (method_exists($this->currentController, $Method)) {
+                $this->currentMethod = $Method;
+                if(isset($url[1])) unset($url[1]);
+            } else {
+                $error = "Method [ ". $Method." ] doesn't exist in Controller [ $Controller ]";
+                require_once('template/404.php');
+                exit();
+            }
+        // }
+        $this->params = $url ? array_values($url) : [];
+        call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+    }
+
+    public function getUrl()
+    {
+        if (isset($_GET['url'])) {
+            $url = rtrim($_GET['url'], '/');
+            $url = filter_var($url, FILTER_SANITIZE_URL);
+            $url = explode('/', $url);
+            return $url;
+        }
+    }
+}
