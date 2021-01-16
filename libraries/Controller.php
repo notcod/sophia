@@ -21,13 +21,21 @@ class Controller
     }
     public function model($model)
     {
-        // $this->ifToken();
-        if (!file_exists('models/' . $model . '.php')) return false;
-
-        require_once 'models/' . $model . '.php';
         $run = explode('/', $model);
-        $run = "\Model\\" . end($run);
-        return new $run();
+        $run = "Sophia\\Model\\" . end($run);
+
+        if (class_exists($run)) {
+            return new $run();
+        }else{
+            if (!file_exists('models/' . $model . '.php')) return false;
+
+            require_once 'models/' . $model . '.php';
+
+            $run = explode('/', $model);
+            $run = "\Model\\" . end($run);
+
+            return new $run();
+        }
     }
     public function view($arr = [])
     {
