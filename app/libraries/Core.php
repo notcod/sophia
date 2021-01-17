@@ -1,4 +1,5 @@
 <?php
+
 namespace Sophia;
 
 class Core
@@ -19,33 +20,31 @@ class Core
         $folder = isset($_POST["_token"]) || isset($_GET["_token"])  ? "requests" : "controllers";
 
         $Controller = isset($url[0]) && !empty($url[0]) ? ucwords($url[0]) : $this->currentController;
-        if (file_exists(DIR.$folder . '/' . $Controller . '.php')) {
+        if (file_exists(DIR . $folder . '/' . $Controller . '.php')) {
             $this->currentController = $Controller;
-            if(isset($url[0])) unset($url[0]);
-        } else{
+            if (isset($url[0])) unset($url[0]);
+        } else {
             $error = "Controller [ $Controller ] doesn't exist!";
-            require_once(DIR.'template/404.php');
+            require_once(DIR . 'template/404.php');
             exit();
         }
 
-        require_once(DIR.$folder . '/' . $this->currentController . '.php');
+        require_once(DIR . $folder . '/' . $this->currentController . '.php');
 
         $this->currentController = ucwords($folder) . "\\" . $this->currentController;
 
         $this->currentController = new $this->currentController;
 
-        
+
         $Method = isset($url[1]) ? $url[1] : $this->currentMethod;
-        // if (isset($url[1])) {
-            if (method_exists($this->currentController, $Method)) {
-                $this->currentMethod = $Method;
-                if(isset($url[1])) unset($url[1]);
-            } else {
-                $error = "Method [ ". $Method." ] doesn't exist in Controller [ $Controller ]";
-                require_once(DIR.'template/404.php');
-                exit();
-            }
-        // }
+        if (method_exists($this->currentController, $Method)) {
+            $this->currentMethod = $Method;
+            if (isset($url[1])) unset($url[1]);
+        } else {
+            $error = "Method [ " . $Method . " ] doesn't exist in Controller [ $Controller ]";
+            require_once(DIR . 'template/404.php');
+            exit();
+        }
         $this->params = $url ? array_values($url) : [];
         call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
     }
