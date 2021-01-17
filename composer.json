@@ -16,6 +16,6 @@
     },
     "require": {
         "notcod/sophia-addon-db": "^1.1",
-        "notcod/sophia-library": "^1.5"
+        "notcod/sophia-library": "^1.6"
     }
 }
