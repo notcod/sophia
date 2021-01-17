@@ -4,15 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5465130d28105e38e3744d1e6147cec3
+class ComposerStaticInit3215779429a356750fe2adbe4cd5ebdb
 {
     public static $files = array (
         'd70975106fd014eed8ad63a8dc39ae89' => __DIR__ . '/..' . '/notcod/sophia-library/src/Functions.php',
         'd214e821526182e8de229652cf41fb5e' => __DIR__ . '/../..' . '/config/config.php',
-        'a63bf7314b85dc6daaca767247f6b3f9' => __DIR__ . '/../..' . '/config/pre-config.php',
         '56f2cb50e91d93094fc61e06d6927921' => __DIR__ . '/../..' . '/template/Stylesheet.php',
         '26caa1a852c8fd6e13ee115e3b6d3f5b' => __DIR__ . '/../..' . '/template/Javascript.php',
-        'd9ee368ad6af52bdfad90548a40603c2' => __DIR__ . '/../..' . '/config/run.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -37,8 +35,8 @@ class ComposerStaticInit5465130d28105e38e3744d1e6147cec3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5465130d28105e38e3744d1e6147cec3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5465130d28105e38e3744d1e6147cec3::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3215779429a356750fe2adbe4cd5ebdb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3215779429a356750fe2adbe4cd5ebdb::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
