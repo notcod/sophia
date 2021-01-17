@@ -243,7 +243,7 @@ function fatal_handler()
         }
     }
 }
-register_shutdown_function("fatal_handler");
+// register_shutdown_function("fatal_handler");
 
 function redirect($filename)
 {
