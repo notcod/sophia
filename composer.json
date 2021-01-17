@@ -8,15 +8,14 @@
         "email": "mneca99+git@gmail.com"
     }],
     "minimum-stability": "stable",
-    "require": {
-        "notcod/sophia-addon-db": "^1.1",
-        "notcod/sophia-library": "^1.1"
-    },
     "autoload": {
         "files": [
-            "config/config.php",
-            "template/Stylesheet.php",
-            "template/Javascript.php"
+            "app/template/Stylesheet.php",
+            "app/template/Javascript.php"
         ]
+    },
+    "require": {
+        "notcod/sophia-addon-db": "^1.1",
+        "notcod/sophia-library": "^1.4"
     }
 }

@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'd70975106fd014eed8ad63a8dc39ae89' => $vendorDir . '/notcod/sophia-library/src/Functions.php',
-    'd214e821526182e8de229652cf41fb5e' => $baseDir . '/config/config.php',
-    '56f2cb50e91d93094fc61e06d6927921' => $baseDir . '/template/Stylesheet.php',
-    '26caa1a852c8fd6e13ee115e3b6d3f5b' => $baseDir . '/template/Javascript.php',
+    '77c30141f212c697a494e0e87650d5b5' => $baseDir . '/app/template/Stylesheet.php',
+    'cd8db06700b97a1990c1d5f6c2e11bf2' => $baseDir . '/app/template/Javascript.php',
 );

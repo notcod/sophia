@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71930a9e71a7f2999f1bac0d78222268",
+    "content-hash": "2b7c2d1798f166e17b3b099710069cf6",
     "packages": [
         {
             "name": "notcod/sophia-addon-db",
@@ -41,16 +41,16 @@
         },
         {
             "name": "notcod/sophia-library",
-            "version": "1.1",
+            "version": "1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/notcod/sophia-library.git",
-                "reference": "4e7a893ae91007b9dd96fb0f81ae991e07f4ef66"
+                "reference": "44aa0816d3855910481d4d297deb1dfba5f9648b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/notcod/sophia-library/zipball/4e7a893ae91007b9dd96fb0f81ae991e07f4ef66",
-                "reference": "4e7a893ae91007b9dd96fb0f81ae991e07f4ef66",
+                "url": "https://api.github.com/repos/notcod/sophia-library/zipball/44aa0816d3855910481d4d297deb1dfba5f9648b",
+                "reference": "44aa0816d3855910481d4d297deb1dfba5f9648b",
                 "shasum": ""
             },
             "type": "library",
@@ -73,7 +73,7 @@
                 }
             ],
             "description": "Sophia PHP framework MAIN library",
-            "time": "2021-01-17T03:32:33+00:00"
+            "time": "2021-01-17T04:15:42+00:00"
         }
     ],
     "packages-dev": [],

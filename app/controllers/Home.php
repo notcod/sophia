@@ -15,7 +15,6 @@ class Home extends \Sophia\Controller
         $this->view([
             'page' => 'index',
             'title' => "Sophia PHP minimalistc framework" ,
-            'a' => $this->model("bla"),
         ]);
     }
 }
