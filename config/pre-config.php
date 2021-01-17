@@ -6,7 +6,7 @@ function is_defined($Constant)
     $constants = get_defined_constants(true);
     return isset($constants['user'][$Constant]);
 }
-
+if(!is_defined("DIR"))     define('DIR', str_replace("\\", "/",dirname(dirname(__FILE__))."/"));
 if(!is_defined("APPROOT")) define('APPROOT', dirname(dirname(dirname(__FILE__))));
 
 if(!is_defined("ROOT")   ) define('ROOT', str_replace($_SERVER["DOCUMENT_ROOT"], "", str_replace("\\", "/", dirname(dirname(__FILE__)))).'/');

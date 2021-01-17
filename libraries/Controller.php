@@ -27,8 +27,8 @@ class Controller
         if (class_exists($run)) {
             return new $run();
         }else{
-            if (!file_exists('models/' . $model . '.php')) return false;
-            require_once 'models/' . $model . '.php';
+            if (!file_exists(DIR.'models/' . $model . '.php')) return false;
+            require_once(DIR.'models/' . $model . '.php');
             return new $run();
         }
     }
@@ -49,7 +49,7 @@ class Controller
         $data["description"] = isset($data["description"]) ? $data["description"] : SITENAME;
         $data["keywords"] = isset($data["keywords"]) ? $data["keywords"] : SITENAME.",".SITENAME;
 
-        require_once 'template/Template.php';
+        require_once(DIR.'template/Template.php');
 
         exit();
     }

@@ -20,7 +20,8 @@
             "config/pre-config.php",
             "libraries/Functions.php",
             "template/Stylesheet.php",
-            "template/Javascript.php"
+            "template/Javascript.php",
+            "config/run.php"
         ]
     }
 }

@@ -18,11 +18,11 @@ class Stylesheet
             $execute[] = $style["ext"] ? $style["href"] : ROOT . $style["href"] . '?v=' . filemtime($style["href"]);
 
         $file = "assets/css/" . $data["view"] . ".css";
-        if (file_exists($file))
+        if (file_exists(DIR.$file))
             $execute[] = $file;
 
         $file = "assets/css/" . $data["view"] . "/" . $data["page"] . ".css";
-        if (isset($data["page"]) && file_exists($file))
+        if (isset($data["page"]) && file_exists(DIR.$file))
             $execute[] = $file;
 
         $execute = array_unique($execute);

@@ -17,10 +17,10 @@
 
 <body>
     <?php
-    if (file_exists('views/' . $data['view'] . '.php')) {
-        require_once 'views/' . $data['view'] . '.php';
-    } elseif (file_exists('views/' . $data['view'] . '/' . $data['page'] . '.php')) {
-        require_once 'views/' . $data['view'] . '/' . $data['page'] . '.php';
+    if (file_exists(DIR.'views/' . $data['view'] . '.php')) {
+        require_once(DIR.'views/' . $data['view'] . '.php');
+    } elseif (file_exists(DIR.'views/' . $data['view'] . '/' . $data['page'] . '.php')) {
+        require_once(DIR.'views/' . $data['view'] . '/' . $data['page'] . '.php');
     } else {
         die("View does not exists.");
     }

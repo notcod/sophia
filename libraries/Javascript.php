@@ -18,11 +18,11 @@ class Javascript
             $execute[] = $script["ext"] ? $script["href"] : ROOT . $script["href"] . '?v=' . filemtime($script["href"]);
 
         $file = "assets/js/" . $data["view"] . ".js";
-        if (file_exists($file))
+        if (file_exists(DIR.$file))
             $execute[] = $file;
 
         $file = "assets/js/" . $data["view"] . "/" . $data["page"] . ".js";
-        if (isset($data["page"]) && file_exists($file))
+        if (isset($data["page"]) && file_exists(DIR.$file))
             $execute[] = $file;
 
         echo PHP_EOL . '<!-- INCLUDED SCRIPTS -->' . PHP_EOL;
