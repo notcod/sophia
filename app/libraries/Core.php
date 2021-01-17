@@ -20,6 +20,9 @@ class Core
         $folder = isset($_POST["_token"]) || isset($_GET["_token"])  ? "requests" : "controllers";
 
         $Controller = isset($url[0]) && !empty($url[0]) ? ucwords($url[0]) : $this->currentController;
+
+        $folder = $Controller == "json" ? 'json' : $folder;
+
         if (file_exists(DIR . $folder . '/' . $Controller . '.php')) {
             $this->currentController = $Controller;
             if (isset($url[0])) unset($url[0]);
