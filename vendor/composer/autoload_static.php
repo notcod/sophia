@@ -8,6 +8,7 @@ class ComposerStaticInitb0fd17f1699ecc601fc7d71746b1959f
 {
     public static $files = array (
         'd214e821526182e8de229652cf41fb5e' => __DIR__ . '/../..' . '/config/config.php',
+        'a63bf7314b85dc6daaca767247f6b3f9' => __DIR__ . '/../..' . '/config/pre-config.php',
         '19c792dadd2faa690b9805adb0deb3cf' => __DIR__ . '/../..' . '/libraries/Functions.php',
         '56f2cb50e91d93094fc61e06d6927921' => __DIR__ . '/../..' . '/template/Stylesheet.php',
         '26caa1a852c8fd6e13ee115e3b6d3f5b' => __DIR__ . '/../..' . '/template/Javascript.php',

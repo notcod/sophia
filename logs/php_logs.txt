@@ -1,0 +1,6 @@
+
+{"type":2,"message":"Use of undefined constant ROOT - assumed 'ROOT' (this will throw an Error in a future version of PHP)","file":"C:\\xampp\\htdocs\\sophia\\views\\home.php","line":16}
+{"type":2,"message":"Use of undefined constant ROOT - assumed 'ROOT' (this will throw an Error in a future version of PHP)","file":"C:\\xampp\\htdocs\\sophia\\views\\home.php","line":16}
+{"type":2,"message":"Use of undefined constant URLROOT - assumed 'URLROOT' (this will throw an Error in a future version of PHP)","file":"C:\\xampp\\htdocs\\sophia\\config\\pre-config.php","line":11}
+{"type":2,"message":"Use of undefined constant ROOT - assumed 'ROOT' (this will throw an Error in a future version of PHP)","file":"C:\\xampp\\htdocs\\sophia\\views\\home.php","line":16}
+{"type":2,"message":"Use of undefined constant ROOT - assumed 'ROOT' (this will throw an Error in a future version of PHP)","file":"C:\\xampp\\htdocs\\sophia\\views\\home.php","line":16}

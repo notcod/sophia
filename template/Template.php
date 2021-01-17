@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#0c6cf2" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" type="image/png" href="//cdn.sophiaphp.com/img/favicon.ico" />
-    <!-- <link rel="icon" type="image/png" href="<?= IMGROOT ?>/assets/img/favicon.ico" /> -->
+    <link rel="icon" type="image/png" href="<?= IMGROOT ?>/assets/img/favicon.ico" />
     <?php \Sophia\Stylesheet::page($data); ?>
 </head>
 

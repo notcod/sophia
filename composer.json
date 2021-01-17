@@ -17,6 +17,7 @@
         },
         "files": [
             "config/config.php",
+            "config/pre-config.php",
             "libraries/Functions.php",
             "template/Stylesheet.php",
             "template/Javascript.php"

@@ -12,15 +12,25 @@ function csrf($get = false, $form = "")
         return '<input type="hidden" name="_token" value="' . $token . '">';
     }
 }
-function contains($str, $check){
+function contains($str, $check)
+{
     return strpos($str, $check) !== false;
 }
-function url_strip($href){
+function url_strip($href)
+{
     return (substr($href, 0, strlen("https://")) == "https://" || substr($href, 0, strlen("http://")) == "http://" || substr($href, 0, 2) == "//");
 }
 function length($str, $c)
 {
     return strlen($str) >= $c ? $str : '';
+}
+function getDefConst($check = false)
+{
+    $constants = get_defined_constants(true);
+
+    if($check) return (isset($constants['user'][$check]) ? $constants['user'][$check] : false);
+
+    return (isset($constants['user']) ? $constants['user'] : array());
 }
 function isEmail($q)
 {
@@ -45,19 +55,20 @@ function html_one_line($content = '')
 }
 function img_root($content = '')
 {
-    if(ROOT == "/") return $content;
+    if (ROOT == "/") return $content;
     $dom = new DOMDocument();
     $dom->loadHTML($content);
-    foreach ($dom->getElementsByTagName('img') as $img){
+    foreach ($dom->getElementsByTagName('img') as $img) {
         $src = $img->getAttribute('src');
-        if(strpos($src, 'https://') === false && strpos($src, 'http://') === false ){
-            $img->setAttribute( 'src', IMGROOT.$src);
+        if (strpos($src, 'https://') === false && strpos($src, 'http://') === false) {
+            $img->setAttribute('src', IMGROOT . $src);
         }
     }
     return $dom->saveHTML();
 }
-function minimize_css($cache){
-    
+function minimize_css($cache)
+{
+
     $search = array(
         '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
         '/[^\S ]+\</s',     // strip whitespaces before tags, except space
