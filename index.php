@@ -1,4 +1,7 @@
 <?php
+require_once("app/vendor/autoload.php");
+
+
 #####################################################
 /** IF YOU HAVE ANY CHECKING BY $_GET PAST IT HERE */
 #####################################################

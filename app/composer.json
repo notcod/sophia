@@ -9,19 +9,14 @@
     }],
     "minimum-stability": "stable",
     "require": {
-        "notcod/sophia-addon-db": "^1.1"
+        "notcod/sophia-addon-db": "^1.1",
+        "notcod/sophia-library": "^1.1"
     },
     "autoload": {
-        "psr-4": {
-            "Sophia\\": "libraries/"
-        },
         "files": [
             "config/config.php",
-            "config/pre-config.php",
-            "libraries/Functions.php",
             "template/Stylesheet.php",
-            "template/Javascript.php",
-            "config/run.php"
+            "template/Javascript.php"
         ]
     }
 }

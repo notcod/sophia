@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6c8282c7c258ae824f34cc36485f4a1",
+    "content-hash": "71930a9e71a7f2999f1bac0d78222268",
     "packages": [
         {
             "name": "notcod/sophia-addon-db",
@@ -38,6 +38,42 @@
             ],
             "description": "DB addon",
             "time": "2021-01-13T01:17:58+00:00"
+        },
+        {
+            "name": "notcod/sophia-library",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/notcod/sophia-library.git",
+                "reference": "4e7a893ae91007b9dd96fb0f81ae991e07f4ef66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/notcod/sophia-library/zipball/4e7a893ae91007b9dd96fb0f81ae991e07f4ef66",
+                "reference": "4e7a893ae91007b9dd96fb0f81ae991e07f4ef66",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sophia\\": "src/"
+                },
+                "files": [
+                    "src/Functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nemanja M",
+                    "email": "mneca99+git@gmail.com"
+                }
+            ],
+            "description": "Sophia PHP framework MAIN library",
+            "time": "2021-01-17T03:32:33+00:00"
         }
     ],
     "packages-dev": [],

@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit49848ad345cd628c56839d7ae29067bb
+class ComposerStaticInit5465130d28105e38e3744d1e6147cec3
 {
     public static $files = array (
+        'd70975106fd014eed8ad63a8dc39ae89' => __DIR__ . '/..' . '/notcod/sophia-library/src/Functions.php',
         'd214e821526182e8de229652cf41fb5e' => __DIR__ . '/../..' . '/config/config.php',
         'a63bf7314b85dc6daaca767247f6b3f9' => __DIR__ . '/../..' . '/config/pre-config.php',
-        '19c792dadd2faa690b9805adb0deb3cf' => __DIR__ . '/../..' . '/libraries/Functions.php',
         '56f2cb50e91d93094fc61e06d6927921' => __DIR__ . '/../..' . '/template/Stylesheet.php',
         '26caa1a852c8fd6e13ee115e3b6d3f5b' => __DIR__ . '/../..' . '/template/Javascript.php',
         'd9ee368ad6af52bdfad90548a40603c2' => __DIR__ . '/../..' . '/config/run.php',
@@ -30,15 +30,15 @@ class ComposerStaticInit49848ad345cd628c56839d7ae29067bb
         ),
         'Sophia\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/libraries',
+            0 => __DIR__ . '/..' . '/notcod/sophia-library/src',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit49848ad345cd628c56839d7ae29067bb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit49848ad345cd628c56839d7ae29067bb::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5465130d28105e38e3744d1e6147cec3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5465130d28105e38e3744d1e6147cec3::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

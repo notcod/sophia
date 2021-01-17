@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Sophia\\Addon\\' => array($vendorDir . '/notcod/sophia-addon-db/src'),
-    'Sophia\\' => array($baseDir . '/libraries'),
+    'Sophia\\' => array($vendorDir . '/notcod/sophia-library/src'),
 );

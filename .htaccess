@@ -1,5 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !.*\.(png|ico|jpg|css|js|ttf|woff|woff2)$ [NC]
-RewriteRule ^(.*)$ app/vendor/autoload.php?572d4e421e5e6b9bc11d815e8a027112=$1 [NC,L,QSA]
-#RewriteRule ^(.*)$ app/vendor/autoload.php?url=$1 [NC,L,QSA]
+RewriteRule ^(.*)$ index.php?572d4e421e5e6b9bc11d815e8a027112=$1 [NC,L,QSA]
