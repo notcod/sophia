@@ -19,8 +19,8 @@ define("EMAIL_USERNAME", "example@gmail.com");
 define("EMAIL_PASSWORD", "undefiend");
 
 define('DIR', __DIR__);
-define('APP', __DIR__.'/app');
-define('APPROOT', str_replace("\\", "/",dirname(dirname(dirname(__FILE__))))."/");
+define('app', __DIR__.'/app');
+define('appROOT', str_replace("\\", "/",dirname(dirname(dirname(__FILE__))))."/");
 
 define('ROOT', str_replace($_SERVER["DOCUMENT_ROOT"], "", str_replace("\\", "/", __DIR__)).'/');
 define('IMGROOT', ROOT == '/' ? '' : substr(ROOT, 0, -1));
