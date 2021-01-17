@@ -16,21 +16,12 @@ class ComposerStaticInitb0fd17f1699ecc601fc7d71746b1959f
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
-            'Stripe\\' => 7,
             'Sophia\\Addon\\' => 13,
             'Sophia\\' => 7,
-        ),
-        'P' => 
-        array (
-            'PHPMailer\\PHPMailer\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Stripe\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
-        ),
         'Sophia\\Addon\\' => 
         array (
             0 => __DIR__ . '/..' . '/notcod/sophia-addon-db/src',
@@ -38,10 +29,6 @@ class ComposerStaticInitb0fd17f1699ecc601fc7d71746b1959f
         'Sophia\\' => 
         array (
             0 => __DIR__ . '/../..' . '/libraries',
-        ),
-        'PHPMailer\\PHPMailer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
     );
 
