@@ -13,7 +13,7 @@ if(!is_defined("ROOT")   ) define('ROOT', str_replace($_SERVER["DOCUMENT_ROOT"],
 if(!is_defined("IMGROOT")) define('IMGROOT', ROOT == '/' ? '' : substr(ROOT, 0, -1));
 
 if(!is_defined("DEV_MODE")) define("DEV_MODE", "1");
-if(!is_defined("CREATE_FILE")) define("CREATE_FILE", "0");
+if(!is_defined("CREATE_FILE")) define("CREATE_FILE", "1");
 
 if(!is_defined("URLROOT")) define("URLROOT", "http://$_SERVER[HTTP_HOST]".ROOT);
 
